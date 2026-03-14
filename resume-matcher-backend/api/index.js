@@ -1,11 +1,11 @@
-const express = require("express");
+import express from "express";
 
 const app = express();
 
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Resume Matcher Backend Running");
+  res.json({ message: "Backend running" });
 });
 
-module.exports = app;
+export default app;
