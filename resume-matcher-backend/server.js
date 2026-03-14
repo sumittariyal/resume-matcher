@@ -10,6 +10,5 @@ app.use(express.json())
 
 app.use("/api", matchRoute)
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000")
-})
+// Export the app for Vercel
+module.exports = app
