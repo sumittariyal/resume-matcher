@@ -1,3 +1,13 @@
-const app = require("../server")
+const express = require("express");
+const cors = require("cors");
 
-module.exports = app
+const matchRoute = require("../routes/matchRoute");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.use("/api", matchRoute);
+
+module.exports = app;
