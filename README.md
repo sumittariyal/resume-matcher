@@ -1,7 +1,7 @@
 # Resume Matcher
 
-A web application that analyzes a resume against a job description and calculates a **match score** based on relevant skills.
-The project helps candidates quickly understand how well their resume fits a specific job role.
+Resume Matcher is a web application that compares a **resume with a job description** and calculates a **match score based on relevant skills**.
+This helps candidates understand how well their resume fits a particular job role.
 
 ---
 
@@ -9,30 +9,26 @@ The project helps candidates quickly understand how well their resume fits a spe
 
 * Upload or paste resume text
 * Add job description
-* Extract and compare skills
+* Extract relevant skills
 * Calculate **resume-job match score**
 * Simple and responsive UI
-* Fast backend processing
+* Fast backend processing using Node.js
 
 ---
 
 ## 🛠 Tech Stack
 
-**Frontend**
+### Frontend
 
 * React.js
 * Axios
 * CSS
 
-**Backend**
+### Backend
 
 * Node.js
 * Express.js
 * CORS
-
-**Processing**
-
-* Python (for resume-job matching logic)
 
 ---
 
@@ -42,20 +38,19 @@ The project helps candidates quickly understand how well their resume fits a spe
 resume-matcher
 │
 ├── resume-matcher-frontend
-│   ├── src
-│   │   ├── components
-│   │   │   ├── ResumeUpload.js
-│   │   │   ├── JobDescription.js
-│   │   │   └── MatchButton.js
-│   │   └── App.js
+│   └── src
+│       ├── components
+│       │   ├── ResumeUpload.js
+│       │   ├── JobDescription.js
+│       │   └── MatchButton.js
+│       └── App.js
 │
 ├── resume-matcher-backend
 │   ├── routes
 │   │   └── matchRoute.js
 │   ├── controllers
 │   │   └── matchController.js
-│   ├── python
-│   │   └── matcher.py
+│   ├── skills.js
 │   └── server.js
 │
 └── README.md
@@ -68,8 +63,10 @@ resume-matcher
 ### 1️⃣ Clone the repository
 
 ```
-git clone https://github.com/your-username/resume-matcher.git
+git clone https://github.com/sumittariyal/resume-matcher.git
 ```
+
+---
 
 ### 2️⃣ Install backend dependencies
 
@@ -77,6 +74,8 @@ git clone https://github.com/your-username/resume-matcher.git
 cd resume-matcher-backend
 npm install
 ```
+
+---
 
 ### 3️⃣ Install frontend dependencies
 
@@ -129,44 +128,30 @@ http://localhost:3000
 
 Example request:
 
-```json
+```
 {
-  "resume": "JavaScript Node React MongoDB",
-  "jobDescription": "Looking for a developer with Node and React experience"
+  "resume": "JavaScript React Node MongoDB",
+  "jobDescription": "Looking for a developer with React and Node experience"
 }
 ```
 
-Example response:
+---
 
-```
-Match Score: 75%
-```
+## ⚙️ How Matching Works
+
+1. User enters resume text and job description.
+2. Backend extracts skills from both inputs.
+3. Skills are compared with the predefined list in **skills.js**.
+4. A **match score** is calculated based on common skills.
 
 ---
 
-## 🌐 Deployment
+## 📌 Future Improvements
 
-Frontend and backend can be deployed using:
-
-* Vercel
-* Netlify
-* Render
-
-Example flow:
-
-```
-React Frontend → API Request → Node.js Backend → Python Matching Script → Response
-```
-
----
-
-## 📸 Future Improvements
-
-* Resume PDF parsing
+* Resume PDF upload
 * NLP based skill extraction
-* Better similarity scoring
-* Authentication system
-* Job recommendation system
+* AI-based resume recommendations
+* Improved matching algorithm
 
 ---
 
@@ -178,4 +163,4 @@ React Frontend → API Request → Node.js Backend → Python Matching Script �
 
 ## ⭐ Support
 
-If you like this project, consider giving it a **star ⭐ on GitHub**.
+If you like this project, give it a **star ⭐ on GitHub**.
