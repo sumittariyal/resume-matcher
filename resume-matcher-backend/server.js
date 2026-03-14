@@ -1,14 +1,11 @@
-const express = require("express")
-const cors = require("cors")
+const express = require("express");
 
-const matchRoute = require("./routes/matchRoute")
+const app = express();
 
-const app = express()
+app.use(express.json());
 
-app.use(cors())
-app.use(express.json())
+app.get("/", (req, res) => {
+  res.send("Resume Matcher API Running");
+});
 
-app.use("/api", matchRoute)
-
-// Export the app for Vercel
-module.exports = app
+module.exports = app;
