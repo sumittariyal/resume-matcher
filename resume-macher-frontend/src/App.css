@@ -1,0 +1,234 @@
+/* Global styles */
+
+body{
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg,#eef2f7,#f9fbff);
+}
+
+/* Resume skills container */
+
+.skills-card{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+/* Individual skill card */
+
+.skill-card{
+  background:white;
+  padding:10px 16px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  font-size:14px;
+  font-weight:500;
+  color:#2563eb;
+  border:1px solid #e2e8f0;
+  transition:0.2s;
+}
+
+.skill-card:hover{
+  transform:scale(1.05);
+  background:#eff6ff;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* Title */
+
+.title{
+  text-align:center;
+  color:#1e293b;
+  margin-bottom:35px;
+}
+
+/* Card */
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Button */
+
+.button-container{
+  margin-top:10px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#1e40af;
+}
+
+/* Textarea */
+
+textarea{
+  width:100%;
+  height:150px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:14px;
+  margin-top:10px;
+}
+
+/* Result card */
+
+.result{
+  margin-top:30px;
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Score box */
+
+.score-box{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.score-box h2{
+  font-size:40px;
+  color:#2563eb;
+  margin:0;
+}
+
+.score-box p{
+  margin:5px 0;
+  color:#555;
+}
+
+/* Info grid */
+
+.info-grid{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+/* Skill tags */
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.skill-tag{
+  background:#e0f2fe;
+  color:#0369a1;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* Table */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+th{
+  background:#2563eb;
+  color:white;
+}
+
+td,th{
+  padding:10px;
+  border:1px solid #ddd;
+}
+
+tr:nth-child(even){
+  background:#f8fafc;
+}
+
+/* Skill status */
+
+.present{
+  color:#16a34a;
+  font-weight:bold;
+}
+
+.missing{
+  color:#dc2626;
+  font-weight:bold;
+}
+/* Skills analysis layout */
+
+.analysis-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+  margin-top:15px;
+}
+
+/* Skill card */
+
+.analysis-card{
+  background:white;
+  padding:12px 15px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Skill name */
+
+.skill-name{
+  font-weight:500;
+}
+
+/* Status badges */
+
+.status{
+  padding:4px 10px;
+  border-radius:15px;
+  font-size:12px;
+  font-weight:600;
+}
+
+/* Present skill */
+
+.present{
+  background:#dcfce7;
+  color:#16a34a;
+}
+
+/* Missing skill */
+
+.missing{
+  background:#fee2e2;
+  color:#dc2626;
+}
+.skill-name {
+  color: #2563eb;
+  font-weight: 500;
+}
